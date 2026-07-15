@@ -11,8 +11,17 @@
     <style>
         /* Cores personalizadas */
         :root {
-            --text-black-blueoil: #3d075c;
-            --bg-black-blueoil: #2f3f57;
+            --text-black-blueoil: #2c43c7;
+            --bg-black-blueoil: #340053;
+        }
+
+        body {
+            background-color: rgb(216, 208, 216);
+            background-attachment: fixed;
+            background-image: url("galaxy.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         #wrap header .logotipo {
@@ -71,14 +80,24 @@
             display: block;
         }
 
-        #wrap header .dropdown-menu {
+         #wrap header .dropdown-menu {
             z-index: 10000;
+        }
+
+        /* Links do rodapé usando variáveis do Bootstrap */
+        #wrap footer a {
+            font-size: 1.8rem;
+            color: var(--bs-light);
+        }
+
+        #wrap footer a:hover {
+            color: var(--bs-gray-300);
         }
     </style>
     <title>Guerra dos célebros</title>
 </head>
 
-<body data-bs-theme="light">
+<body data-bs-theme="light" class="vh-100" style="background-color: #c2beca;">
 
     <div id="wrap">
         <header class="bg-black-blueoil">
@@ -91,13 +110,13 @@
                     </a>
                     <h1 class="text-black-blueoil text-center">
                         Guerra dos célebros
-                        <small class="d-block">Melhores Designs</small>
+                        <small class="d-block">Melhores Designs de Andrômeda</small>
                     </h1>
                 </div>
 
                 <!-- Se não tem logado -->
                 <div class="unlogged dropdown d-flex align-items-center gap-2 justify-content-center p-2 ms-sm-auto">
-                    <img class="rounded-circle" src="coiosa.jpg" alt="Logue-se!">
+                    <img class="rounded-circle" src="neutral wip.webp" alt="Logue-se!">
                     <a href="javascript: void(0)" class="dropdown-toggle" data-bs-toggle="dropdown">
                         Logue-se!
                     </a>
@@ -163,164 +182,35 @@
             </div>
         </nav>
 
-
         <main>
-            <h2>Título </h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam aperiam reiciendis omnis non nobis. Debitis
-                tempore odit laboriosam perferendis delectus voluptates modi eligendi cupiditate quibusdam aperiam. Est,
-                tempora? Nobis, minus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum debitis eius, placeat laboriosam quisquam
-                saepe, optio maxime obcaecati, provident vel animi pariatur iure corporis exercitationem minus tempore
-                veritatis quia distinctio!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque error reiciendis iste laborum harum
-                architecto accusamus a. Corrupti quas quasi, est asperiores veritatis, nam, atque voluptas ea cum
-                adipisci sit!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore adipisci consequuntur molestias
-                voluptas dignissimos similique odio veritatis error, unde provident harum voluptate, eos cum accusantium
-                doloremque quos numquam, minima quo?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores praesentium numquam soluta, a itaque
-                animi ipsa sed corrupti quos reprehenderit fuga esse, illum ut sint consequatur nemo ab corporis
-                dolorum?</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam aperiam reiciendis omnis non nobis. Debitis
-                tempore odit laboriosam perferendis delectus voluptates modi eligendi cupiditate quibusdam aperiam. Est,
-                tempora? Nobis, minus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum debitis eius, placeat laboriosam quisquam
-                saepe, optio maxime obcaecati, provident vel animi pariatur iure corporis exercitationem minus tempore
-                veritatis quia distinctio!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque error reiciendis iste laborum harum
-                architecto accusamus a. Corrupti quas quasi, est asperiores veritatis, nam, atque voluptas ea cum
-                adipisci sit!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore adipisci consequuntur molestias
-                voluptas dignissimos similique odio veritatis error, unde provident harum voluptate, eos cum accusantium
-                doloremque quos numquam, minima quo?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores praesentium numquam soluta, a itaque
-                animi ipsa sed corrupti quos reprehenderit fuga esse, illum ut sint consequatur nemo ab corporis
-                dolorum?</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam aperiam reiciendis omnis non nobis. Debitis
-                tempore odit laboriosam perferendis delectus voluptates modi eligendi cupiditate quibusdam aperiam. Est,
-                tempora? Nobis, minus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum debitis eius, placeat laboriosam quisquam
-                saepe, optio maxime obcaecati, provident vel animi pariatur iure corporis exercitationem minus tempore
-                veritatis quia distinctio!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque error reiciendis iste laborum harum
-                architecto accusamus a. Corrupti quas quasi, est asperiores veritatis, nam, atque voluptas ea cum
-                adipisci sit!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore adipisci consequuntur molestias
-                voluptas dignissimos similique odio veritatis error, unde provident harum voluptate, eos cum accusantium
-                doloremque quos numquam, minima quo?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores praesentium numquam soluta, a itaque
-                animi ipsa sed corrupti quos reprehenderit fuga esse, illum ut sint consequatur nemo ab corporis
-                dolorum?</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam aperiam reiciendis omnis non nobis. Debitis
-                tempore odit laboriosam perferendis delectus voluptates modi eligendi cupiditate quibusdam aperiam. Est,
-                tempora? Nobis, minus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum debitis eius, placeat laboriosam quisquam
-                saepe, optio maxime obcaecati, provident vel animi pariatur iure corporis exercitationem minus tempore
-                veritatis quia distinctio!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque error reiciendis iste laborum harum
-                architecto accusamus a. Corrupti quas quasi, est asperiores veritatis, nam, atque voluptas ea cum
-                adipisci sit!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore adipisci consequuntur molestias
-                voluptas dignissimos similique odio veritatis error, unde provident harum voluptate, eos cum accusantium
-                doloremque quos numquam, minima quo?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores praesentium numquam soluta, a itaque
-                animi ipsa sed corrupti quos reprehenderit fuga esse, illum ut sint consequatur nemo ab corporis
-                dolorum?</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam aperiam reiciendis omnis non nobis. Debitis
-                tempore odit laboriosam perferendis delectus voluptates modi eligendi cupiditate quibusdam aperiam. Est,
-                tempora? Nobis, minus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum debitis eius, placeat laboriosam quisquam
-                saepe, optio maxime obcaecati, provident vel animi pariatur iure corporis exercitationem minus tempore
-                veritatis quia distinctio!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque error reiciendis iste laborum harum
-                architecto accusamus a. Corrupti quas quasi, est asperiores veritatis, nam, atque voluptas ea cum
-                adipisci sit!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore adipisci consequuntur molestias
-                voluptas dignissimos similique odio veritatis error, unde provident harum voluptate, eos cum accusantium
-                doloremque quos numquam, minima quo?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores praesentium numquam soluta, a itaque
-                animi ipsa sed corrupti quos reprehenderit fuga esse, illum ut sint consequatur nemo ab corporis
-                dolorum?</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam aperiam reiciendis omnis non nobis. Debitis
-                tempore odit laboriosam perferendis delectus voluptates modi eligendi cupiditate quibusdam aperiam. Est,
-                tempora? Nobis, minus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum debitis eius, placeat laboriosam quisquam
-                saepe, optio maxime obcaecati, provident vel animi pariatur iure corporis exercitationem minus tempore
-                veritatis quia distinctio!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque error reiciendis iste laborum harum
-                architecto accusamus a. Corrupti quas quasi, est asperiores veritatis, nam, atque voluptas ea cum
-                adipisci sit!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore adipisci consequuntur molestias
-                voluptas dignissimos similique odio veritatis error, unde provident harum voluptate, eos cum accusantium
-                doloremque quos numquam, minima quo?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores praesentium numquam soluta, a itaque
-                animi ipsa sed corrupti quos reprehenderit fuga esse, illum ut sint consequatur nemo ab corporis
-                dolorum?</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam aperiam reiciendis omnis non nobis. Debitis
-                tempore odit laboriosam perferendis delectus voluptates modi eligendi cupiditate quibusdam aperiam. Est,
-                tempora? Nobis, minus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum debitis eius, placeat laboriosam quisquam
-                saepe, optio maxime obcaecati, provident vel animi pariatur iure corporis exercitationem minus tempore
-                veritatis quia distinctio!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque error reiciendis iste laborum harum
-                architecto accusamus a. Corrupti quas quasi, est asperiores veritatis, nam, atque voluptas ea cum
-                adipisci sit!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore adipisci consequuntur molestias
-                voluptas dignissimos similique odio veritatis error, unde provident harum voluptate, eos cum accusantium
-                doloremque quos numquam, minima quo?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores praesentium numquam soluta, a itaque
-                animi ipsa sed corrupti quos reprehenderit fuga esse, illum ut sint consequatur nemo ab corporis
-                dolorum?</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam aperiam reiciendis omnis non nobis. Debitis
-                tempore odit laboriosam perferendis delectus voluptates modi eligendi cupiditate quibusdam aperiam. Est,
-                tempora? Nobis, minus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum debitis eius, placeat laboriosam quisquam
-                saepe, optio maxime obcaecati, provident vel animi pariatur iure corporis exercitationem minus tempore
-                veritatis quia distinctio!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque error reiciendis iste laborum harum
-                architecto accusamus a. Corrupti quas quasi, est asperiores veritatis, nam, atque voluptas ea cum
-                adipisci sit!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore adipisci consequuntur molestias
-                voluptas dignissimos similique odio veritatis error, unde provident harum voluptate, eos cum accusantium
-                doloremque quos numquam, minima quo?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores praesentium numquam soluta, a itaque
-                animi ipsa sed corrupti quos reprehenderit fuga esse, illum ut sint consequatur nemo ab corporis
-                dolorum?</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam aperiam reiciendis omnis non nobis. Debitis
-                tempore odit laboriosam perferendis delectus voluptates modi eligendi cupiditate quibusdam aperiam. Est,
-                tempora? Nobis, minus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum debitis eius, placeat laboriosam quisquam
-                saepe, optio maxime obcaecati, provident vel animi pariatur iure corporis exercitationem minus tempore
-                veritatis quia distinctio!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque error reiciendis iste laborum harum
-                architecto accusamus a. Corrupti quas quasi, est asperiores veritatis, nam, atque voluptas ea cum
-                adipisci sit!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore adipisci consequuntur molestias
-                voluptas dignissimos similique odio veritatis error, unde provident harum voluptate, eos cum accusantium
-                doloremque quos numquam, minima quo?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores praesentium numquam soluta, a itaque
-                animi ipsa sed corrupti quos reprehenderit fuga esse, illum ut sint consequatur nemo ab corporis
-                dolorum?</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam aperiam reiciendis omnis non nobis. Debitis
-                tempore odit laboriosam perferendis delectus voluptates modi eligendi cupiditate quibusdam aperiam. Est,
-                tempora? Nobis, minus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum debitis eius, placeat laboriosam quisquam
-                saepe, optio maxime obcaecati, provident vel animi pariatur iure corporis exercitationem minus tempore
-                veritatis quia distinctio!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque error reiciendis iste laborum harum
-                architecto accusamus a. Corrupti quas quasi, est asperiores veritatis, nam, atque voluptas ea cum
-                adipisci sit!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore adipisci consequuntur molestias
-                voluptas dignissimos similique odio veritatis error, unde provident harum voluptate, eos cum accusantium
-                doloremque quos numquam, minima quo?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores praesentium numquam soluta, a itaque
-                animi ipsa sed corrupti quos reprehenderit fuga esse, illum ut sint consequatur nemo ab corporis
-                dolorum?</p>
+            <div class="container">
+                <div class="row">
+                    <section class="col-md-8 col-lg-9 bg-body pt-3">
+                        <h2>Título</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque obcaecati reprehenderit ipsa
+                            placeat, vitae soluta accusantium dolores rem possimus ut aliquam consectetur ab nobis,
+                            dolore
+                            veniam eligendi iure, facilis voluptates.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis asperiores laborum repellat
+                            iusto, soluta voluptatem distinctio, mollitia quo optio, nostrum impedit inventore quidem
+                            velit
+                            fugiat aperiam quos? Recusandae, ut quo.</p>
+                    </section>
 
+                    <aside class="col-md-4 col-lg-3 bg-body-secondary pt-3">
+                        <h3>Veja também</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita necessitatibus sint rem
+                            sed.
+                        </p>
+                    </aside>
+                </div>
+            </div>
         </main>
 
         <footer>
-            FOOTER
+            <a href="index.html"><i class="bi bi-house-fill"></i></a>
+            <div>&copy; 2026 Elesestãodeolhoemnósdasilva</div>
+            <a href="#top"><i class="bi bi-arrow-up-circle-fill"></i></a>
         </footer>
 
     </div>
@@ -399,5 +289,179 @@
         observer.observe(header);
     </script>
 </body>
+<footer class="bg-dark text-light pt-5 pb-3 mt-5 border-top border-secondary">
 
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- Logo -->
+            <div class="col-lg-4 col-md-6">
+
+                <h3 class="fw-bold text-primary">
+                    <i class="bi bi-stars"></i>
+                    Guerra dos Cérebros
+                </h3>
+
+                <p class="text-secondary mt-3">
+                    Melhores Designs de Andrômeda. utilizando Bootstrap 5 galático.
+                </p>
+
+            </div>
+
+            <!-- Navegação -->
+            <div class="col-lg-2 col-md-6">
+
+                <h5 class="text-white mb-3">
+                    Navegação
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li>
+                        <a href="index.html" class="footer-link">
+                            <i class="bi bi-house-fill"></i>
+                            Início
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#conteudo" class="footer-link">
+                            <i class="bi bi-file-earmark-text"></i>
+                            Conteúdo
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#sobre_o_site" class="footer-link">
+                            <i class="bi bi-info-circle"></i>
+                            Sobre
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#faca_contato" class="footer-link">
+                            <i class="bi bi-envelope-fill"></i>
+                            Contato
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contato -->
+            <div class="col-lg-3 col-md-6">
+
+                <h5 class="text-white mb-3">
+
+                    Contato
+
+                </h5>
+
+                <p>
+                    <i class="bi bi-envelope-fill text-primary"></i>
+
+                    contato@kaykepcansancao08@gmail.com
+                </p>
+
+                <p>
+                    <i class="bi bi-telephone-fill text-primary"></i>
+
+                    (21) 96756-2192
+                </p>
+
+                <p>
+                    <i class="bi bi-geo-alt-fill text-primary"></i>
+
+                    Andrômeda, Via Láctea
+                </p>
+
+            </div>
+
+            <!-- Redes Sociais -->
+            <div class="col-lg-3 col-md-6">
+
+                <h5 class="text-white mb-3">
+
+                    Redes Sociais
+
+                </h5>
+
+                <div class="d-flex gap-3">
+
+                    <a href="#" class="social-icon">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#" class="social-icon">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#" class="social-icon">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+
+                    <a href="#" class="social-icon">
+                        <i class="bi bi-github"></i>
+                    </a>
+
+                    <a href="#" class="social-icon">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+
+                </div>
+
+                <a href="#top" class="btn btn-outline-primary mt-4 rounded-pill">
+                    <i class="bi bi-arrow-up-circle-fill"></i>
+                    Voltar ao topo
+                </a>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary my-4">
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+            <p class="mb-2 mb-md-0 text-secondary">
+
+                © 2026 Guerra dos Cérebros • Todos os direitos reservados.
+
+            </p>
+
+            <small class="text-secondary">
+
+                Desenvolvido por Aligenigenas
+
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <style>
+        html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#wrap {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+main {
+    flex: 1;
+}
+
+</footer>
 </html>
