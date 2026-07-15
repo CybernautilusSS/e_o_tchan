@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importa o framework Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        /* Cores personalizadas */
+        :root {
+            --text-black-blueoil: #2c43c7;
+            --bg-black-blueoil: #340053;
+        }
+
+        body {
+            background-color: rgb(216, 208, 216);
+            background-attachment: fixed;
+            background-image: url("galaxy.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #wrap header .logotipo {
+            height: 100px;
+            width: auto;
+        }
+
+        #wrap header small {
+            font-size: 73%;
+        }
+
+        .logged img,
+        .unlogged img {
+            height: 2rem;
+            width: 2rem;
+        }
+
+        @media screen and (min-width: 576px) {
+
+            .logged img,
+            .unlogged img {
+                height: 4rem;
+                width: 4rem;
+            }
+        }
+
+        .logged .dropdown-toggle,
+        .unlogged .dropdown-toggle {
+            color: var(--text-black-blueoil);
+            text-decoration: none;
+        }
+
+        .text-black-blueoil {
+            color: var(--text-black-blueoil);
+        }
+
+        .bg-black-blueoil {
+            background-color: var(--bg-black-blueoil);
+        }
+
+        .navbar-brand img {
+            height: 2.5rem;
+            width: auto;
+        }
+
+        .navbar-brand {
+            opacity: 0;
+            /* visibility: hidden; */
+            display: none;
+            transition: opacity .3s ease;
+        }
+
+        .navbar-brand.show {
+            opacity: 1;
+            /* visibility: visible; */
+            display: block;
+        }
+
+         #wrap header .dropdown-menu {
+            z-index: 10000;
+        }
+
+        /* Links do rodapé usando variáveis do Bootstrap */
+        #wrap footer a {
+            font-size: 1.8rem;
+            color: var(--bs-light);
+        }
+
+        #wrap footer a:hover {
+            color: var(--bs-gray-300);
+        }
+    </style>
+    <title>Guerra dos célebros</title>
+</head>
+
+<body data-bs-theme="light" class="vh-100" style="background-color: #c2beca;">
+
+    <div id="wrap">
+        <header class="bg-black-blueoil">
+            <!-- Jumbotron -->
+            <div class="container p-2 text-white d-flex flex-column flex-sm-row">
+
+                <div class="d-flex align-items-center gap-2">
+                    <a href="index.html">
+                        <img class="rounded d-block logotipo" src="guerra.jpg" alt="Logotipo do Guerra dos célebros">
+                    </a>
+                    <h1 class="text-black-blueoil text-center">
+                        Guerra dos célebros
+                        <small class="d-block">Melhores Designs de Andrômeda</small>
+                    </h1>
+                </div>
+
+                <!-- Se não tem logado -->
+                <div class="unlogged dropdown d-flex align-items-center gap-2 justify-content-center p-2 ms-sm-auto">
+                    <img class="rounded-circle" src="neutral wip.webp" alt="Logue-se!">
+                    <a href="javascript: void(0)" class="dropdown-toggle" data-bs-toggle="dropdown">
+                        Logue-se!
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript: void(0)" data-bs-toggle="modal"
+                                data-bs-target="#myModal">Fazer login</a></li>
+                        <li><a class="dropdown-item" href="javascript: void(0)">Cadastre-se</a></li>
+                    </ul>
+                </div>
+
+                <!-- Se o usuário está logado -->
+                <div class="logged dropdown d-none align-items-center gap-2 justify-content-center p-2 ms-sm-auto">
+                    <img class="rounded-circle" src="https://randomuser.me/api/portraits/men/3.jpg" alt="Joca da Silva">
+                    <a href="javascript: void(0)" class="dropdown-toggle" data-bs-toggle="dropdown">
+                        Joca da Silva
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript: void(0)">Ver perfil</a></li>
+                        <li><a class="dropdown-item" href="javascript: void(0)">Sair / Logout</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand p-0" href="index.html" data-bs-toggle="tooltip"
+                    title="MyBootstrap - Melhores Designs" data-bs-placement="bottom">
+                    <img class="rounded" src="img/image.png" alt="Logotipo de MyBootstrap">
+                </a>
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Ínicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#conteudo">Conteúdo</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Sobre</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#sobre_o_site">Sobre o Site</a></li>
+                                <li><a class="dropdown-item" href="#sobre_o_autor">Sobre o Autor</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#faca_contato">Faça Contato</a></li>
+                                <li><a class="dropdown-item" href="#privacidade">Políticas de Privacidade</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-2 mt-sm-0 ms-0 ms-sm-2">
+                        <input class="form-control me-2" type="text" placeholder="Procurar...">
+                        <button class="btn btn-primary" type="button"><i class="bi bi-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <div class="container">
+                <div class="row">
+                    <section class="col-md-8 col-lg-9 bg-body pt-3">
+                        <h2>Título</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque obcaecati reprehenderit ipsa
+                            placeat, vitae soluta accusantium dolores rem possimus ut aliquam consectetur ab nobis,
+                            dolore
+                            veniam eligendi iure, facilis voluptates.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis asperiores laborum repellat
+                            iusto, soluta voluptatem distinctio, mollitia quo optio, nostrum impedit inventore quidem
+                            velit
+                            fugiat aperiam quos? Recusandae, ut quo.</p>
+                    </section>
+
+<main class="flex-grow-1 d-flex">
+            <div class="container d-flex">
+                <div class="row flex-grow-1">
+                    <section class="col-md-8 col-lg-9 bg-body pt-3">
+                        <h2>Faça Contato</h2>
+                        <p>Preencha os campos abaixo para entrar em contato com a equipe do site.</p>
+
+                        <form action="" method="get">
+
+                            <div class="form-floating mb-3 mt-3">
+                                <input type="text" class="form-control" id="contactName" name="name" required
+                                    minlength="2">
+                                <label for="contactName">Nome:</label>
+                            </div>
+
+                            <div class="form-floating mb-3 mt-3">
+                                <input type="email" class="form-control" id="contactEmail" name="email" required>
+                                <label for="contactEmail">E-mail:</label>
+                            </div>
+
+                            <div class="form-floating mb-3 mt-3">
+                                <input type="text" class="form-control" id="contactSubject" name="subject" required
+                                    minlength="3">
+                                <label for="contactSubject">Assunto:</label>
+                            </div>
+
+                            <div class="form-floating">
+                                <textarea class="form-control" id="contactMessage" name="message" required minlength="4"></textarea>
+                                <label for="contactMessage">Comments</label>
+                            </div>
+
+
+                    </aside>
+                </div>
+            </div>
+        </main>
+
+
+        <footer>
+            <a href="index.html"><i class="bi bi-house-fill"></i></a>
+            <div>&copy; 2026 Elesestãodeolhoemnósdasilva</div>
+            <a href="#top"><i class="bi bi-arrow-up-circle-fill"></i></a>
+        </footer>
+
+    </div>
+
+    <!-- Modal de login -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Fazer login</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+
+                    <div class="alert alert-danger alert-dismissible fade show">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        <strong>Oooops!</strong> Algo errado não está certo!
+                    </div>
+
+                    <form>
+                        <div class="form-floating mb-3 mt-3">
+                            <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+                            <label for="email">Email</label>
+                        </div>
+
+                        <div class="form-floating mt-3 mb-3">
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password"
+                                name="pswd">
+                            <label for="pwd">Password</label>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button type="submit" class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i>
+                                Entrar</button>
+                            <span class="text-center"><a href="javascript:void(0)">Recuperar senha</a></span>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Importa o framework Bootstrap 5 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script>
+        // Habilita tooltips do Bootstrap
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+        const header = document.querySelector("#wrap > header");
+        const brand = document.querySelector(".navbar-brand");
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                brand.classList.toggle("show", !entry.isIntersecting);
+            },
+            {
+                threshold: 0
+            }
+        );
+
+        observer.observe(header);
+    </script>
+</body>
+<footer class="bg-dark text-light pt-5 pb-3 mt-5 border-top border-secondary">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- Logo -->
+            <div class="col-lg-4 col-md-6">
+
+                <h3 class="fw-bold text-primary">
+                    <i class="bi bi-stars"></i>
+                    Guerra dos Cérebros
+                </h3>
+
+                <p class="text-secondary mt-3">
+                    Melhores Designs de Andrômeda. utilizando Bootstrap 5 galático.
+                </p>
+
+            </div>
+           
+            <!-- Navegação -->
+            <div class="col-lg-2 col-md-6">
+
+                <h5 class="text-white mb-3">
+                    Navegação
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li>
+                        <a href="index.html" class="footer-link">
+                            <i class="bi bi-house-fill"></i>
+                            Início
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#conteudo" class="footer-link">
+                            <i class="bi bi-file-earmark-text"></i>
+                            Conteúdo
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#sobre_o_site" class="footer-link">
+                            <i class="bi bi-info-circle"></i>
+                            Sobre
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#faca_contato" class="footer-link">
+                            <i class="bi bi-envelope-fill"></i>
+                            Contato
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contato -->
+            <div class="col-lg-3 col-md-6">
+
+                <h5 class="text-white mb-3">
+
+                    Contato
+
+                </h5>
+
+                <p>
+                    <i class="bi bi-envelope-fill text-primary"></i>
+
+                    contato@kaykepcansancao08@gmail.com
+                </p>
+
+                <p>
+                    <i class="bi bi-telephone-fill text-primary"></i>
+
+                    (21) 96756-2192
+                </p>
+
+                <p>
+                    <i class="bi bi-geo-alt-fill text-primary"></i>
+
+                    Andrômeda, Via Láctea
+                </p>
+
+            </div>
+
+            <!-- Redes Sociais -->
+            <div class="col-lg-3 col-md-6">
+
+                <h5 class="text-white mb-3">
+
+                    Redes Sociais
+
+                </h5>
+
+                <div class="d-flex gap-3">
+
+                    <a href="#" class="social-icon">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#" class="social-icon">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#" class="social-icon">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+
+                    <a href="#" class="social-icon">
+                        <i class="bi bi-github"></i>
+                    </a>
+
+                    <a href="#" class="social-icon">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+
+                </div>
+
+                <a href="#top" class="btn btn-outline-primary mt-4 rounded-pill">
+                    <i class="bi bi-arrow-up-circle-fill"></i>
+                    Voltar ao topo
+                </a>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary my-4">
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+            <p class="mb-2 mb-md-0 text-secondary">
+
+                © 2026 Guerra dos Cérebros • Todos os direitos reservados.
+
+            </p>
+
+            <small class="text-secondary">
+
+                Desenvolvido por Aligenigenas
+
+            </small>
+
+        </div>
+
+    </div>
+
+
+   <body>
+
+    <style>
+        html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#wrap {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+main {
+    flex: 1;
+}
+
+</footer>
+</html>

@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guerra dos Cérebros</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+
+        :root{
+            --cor-principal:#340053;
+            --cor-secundaria:#2c43c7;
+        }
+
+        html,
+        body{
+            height:100%;
+        }
+
+        body{
+
+            display:flex;
+            flex-direction:column;
+
+            min-height:100vh;
+
+            background:
+            linear-gradient(rgba(0,0,0,.55),
+            rgba(0,0,0,.55)),
+            url("galaxy.jpg");
+
+            background-size:cover;
+            background-position:center;
+            background-attachment:fixed;
+
+        }
+
+        #wrap{
+
+            display:flex;
+            flex-direction:column;
+            flex:1;
+
+        }
+
+        main{
+
+            flex:1;
+
+        }
+
+        .bg-space{
+
+            background:var(--cor-principal);
+
+        }
+
+        .text-space{
+
+            color:var(--cor-secundaria);
+
+        }
+
+        .logotipo{
+
+            height:90px;
+
+        }
+
+        .navbar{
+
+            box-shadow:0 .5rem 1rem rgba(0,0,0,.35);
+
+        }
+
+        .navbar-brand{
+
+            font-weight:bold;
+
+        }
+
+        .navbar-brand img{
+
+            height:45px;
+
+        }
+
+        .dropdown-toggle{
+
+            text-decoration:none;
+
+        }
+
+        .logged img,
+        .unlogged img{
+
+            width:55px;
+            height:55px;
+
+            object-fit:cover;
+
+        }
+
+        .card{
+
+            border:none;
+
+            border-radius:18px;
+
+            transition:.3s;
+
+            box-shadow:0 .4rem 1rem rgba(0,0,0,.15);
+
+        }
+
+        .card:hover{
+
+            transform:translateY(-6px);
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div id="wrap">
+
+<header class="bg-space shadow">
+
+<div class="container py-3">
+
+<div class="d-flex flex-column flex-lg-row align-items-center">
+
+<div class="d-flex align-items-center">
+
+<a href="index.html">
+
+<img src="guerra.jpg"
+class="rounded logotipo"
+alt="Logo Guerra dos Cérebros">
+
+</a>
+
+<div class="ms-3">
+
+<h1 class="text-space fw-bold mb-0">
+
+Guerra dos Cérebros
+
+</h1>
+
+<p class="text-light mb-0">
+
+Melhores Designs de Andrômeda
+
+</p>
+
+</div>
+
+</div>
+
+<div class="ms-lg-auto mt-3 mt-lg-0">
+
+<div class="dropdown unlogged">
+
+<a href="#"
+
+class="dropdown-toggle text-white"
+
+data-bs-toggle="dropdown">
+
+<img src="neutral wip.webp"
+
+class="rounded-circle me-2">
+
+Entrar
+
+</a>
+
+<ul class="dropdown-menu dropdown-menu-end">
+
+<li>
+
+<a class="dropdown-item"
+
+data-bs-toggle="modal"
+
+data-bs-target="#myModal"
+
+href="#">
+
+<i class="bi bi-box-arrow-in-right"></i>
+
+Fazer Login
+
+</a>
+
+</li>
+
+<li>
+
+<a class="dropdown-item" href="#">
+
+<i class="bi bi-person-plus-fill"></i>
+
+Cadastre-se
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="index.html">
+
+<img src="guerra.jpg"
+
+class="rounded me-2">
+
+Guerra dos Cérebros
+
+</a>
+
+<button
+
+class="navbar-toggler"
+
+type="button"
+
+data-bs-toggle="collapse"
+
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse"
+
+id="menu">
+
+<ul class="navbar-nav me-auto">
+
+<li class="nav-item">
+
+<a class="nav-link active"
+
+href="index.html">
+
+Início
+
+</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link"
+
+href="#conteudo">
+
+Conteúdo
+
+</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link"
+
+href="#contato">
+
+Contato
+
+</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link"
+
+href="#sobre">
+
+Sobre
+
+</a>
+
+</li>
+
+</ul>
+
+<form class="d-flex">
+
+<input
+
+class="form-control me-2"
+
+type="search"
+
+placeholder="Pesquisar...">
+
+<button
+
+class="btn btn-primary">
+
+<i class="bi bi-search"></i>
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</nav>
+
+<main class="py-5">
+
+<div class="container">
+
+<div class="row">
+    <!-- Conteúdo Principal -->
+<section id="conteudo" class="col-lg-8 mb-4">
+
+    <div class="card h-100">
+
+        <div class="card-body">
+
+            <span class="badge bg-primary mb-3">
+                Destaque
+            </span>
+
+            <h2 class="card-title fw-bold">
+
+                Bem-vindo a Guerra dos Cérebros
+
+            </h2>
+
+            <p class="lead">
+
+                Explore conteúdos sobre tecnologia, criatividade,
+                desenvolvimento web e os melhores designs da galáxia.
+
+            </p>
+
+            <hr>
+
+            <p>
+
+                Este projeto foi desenvolvido utilizando
+                <strong>HTML5</strong>,
+                <strong>CSS3</strong>,
+                <strong>Bootstrap 5</strong>
+                e JavaScript.
+
+            </p>
+
+            <div class="row g-3 mt-2">
+
+                <div class="col-md-6">
+
+                    <div class="card bg-primary text-white h-100">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-stars fs-1"></i>
+
+                            <h4 class="mt-3">
+
+                                Design Moderno
+
+                            </h4>
+
+                            <p>
+
+                                Interface elegante com foco em
+                                responsividade e experiência do usuário.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="card bg-dark text-white h-100">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-bootstrap-fill fs-1"></i>
+
+                            <h4 class="mt-3">
+
+                                Bootstrap 5
+
+                            </h4>
+
+                            <p>
+
+                                Componentes modernos, rápidos e
+                                totalmente responsivos.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Barra Lateral -->
+<aside class="col-lg-4">
+
+    <div class="card mb-4">
+
+        <div class="card-header bg-dark text-white">
+
+            <i class="bi bi-lightning-charge-fill"></i>
+
+            Veja Também
+
+        </div>
+
+        <div class="list-group list-group-flush">
+
+            <a href="#" class="list-group-item list-group-item-action">
+
+                HTML5 Moderno
+
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action">
+
+                CSS Responsivo
+
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action">
+
+                Bootstrap 5
+
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action">
+
+                JavaScript
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <h4>
+
+                <i class="bi bi-person-circle"></i>
+
+                Autor
+
+            </h4>
+
+            <p>
+
+                Kayke Cansanção
+
+            </p>
+
+            <small class="text-muted">
+
+                Desenvolvedor Front-End
+
+            </small>
+
+        </div>
+
+    </div>
+
+</aside>
+
+</div>
+
+<!-- Formulário -->
+
+<div class="row mt-5" id="contato">
+
+<div class="col-lg-8 mx-auto">
+
+<div class="card">
+
+<div class="card-header bg-primary text-white">
+
+<h3 class="mb-0">
+
+<i class="bi bi-envelope-fill"></i>
+
+Faça Contato
+
+</h3>
+
+</div>
+
+<div class="card-body">
+
+<form>
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+
+Nome
+
+</label>
+
+<input
+
+type="text"
+
+class="form-control"
+
+required>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+
+E-mail
+
+</label>
+
+<input
+
+type="email"
+
+class="form-control"
+
+required>
+
+</div>
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+
+Assunto
+
+</label>
+
+<input
+
+type="text"
+
+class="form-control"
+
+required>
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+
+Mensagem
+
+</label>
+
+<textarea
+
+class="form-control"
+
+rows="5"
+
+required></textarea>
+
+</div>
+
+<div class="text-end">
+
+<button
+
+class="btn btn-primary btn-lg">
+
+<i class="bi bi-send-fill"></i>
+
+Enviar Mensagem
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+<!-- =========================
+        FOOTER
+========================== -->
+
+<footer class="bg-dark text-light pt-5 pb-3 border-top border-secondary">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- Logo -->
+            <div class="col-lg-4">
+
+                <h3 class="fw-bold text-primary">
+
+                    <i class="bi bi-stars"></i>
+
+                    Guerra dos Cérebros
+
+                </h3>
+
+                <p class="text-secondary mt-3">
+
+                    Melhores Designs de Andrômeda.
+
+                    Um projeto criado para demonstrar HTML5,
+                    CSS3, Bootstrap 5 e JavaScript.
+
+                </p>
+
+            </div>
+
+            <!-- Navegação -->
+            <div class="col-lg-2">
+
+                <h5>Navegação</h5>
+
+                <ul class="list-unstyled">
+
+                    <li><a class="footer-link" href="index.html">
+
+                        <i class="bi bi-house-fill"></i>
+
+                        Início
+
+                    </a></li>
+
+                    <li><a class="footer-link" href="#conteudo">
+
+                        Conteúdo
+
+                    </a></li>
+
+                    <li><a class="footer-link" href="#contato">
+
+                        Contato
+
+                    </a></li>
+
+                    <li><a class="footer-link" href="#sobre">
+
+                        Sobre
+
+                    </a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contato -->
+            <div class="col-lg-3">
+
+                <h5>Contato</h5>
+
+                <p>
+
+                    <i class="bi bi-envelope-fill text-primary"></i>
+
+                    kaykepcansancao08@gmail.com
+
+                </p>
+
+                <p>
+
+                    <i class="bi bi-telephone-fill text-primary"></i>
+
+                    (21) 96756-2192
+
+                </p>
+
+                <p>
+
+                    <i class="bi bi-geo-alt-fill text-primary"></i>
+
+                    Rio de Janeiro - RJ
+
+                </p>
+
+            </div>
+
+            <!-- Redes -->
+            <div class="col-lg-3">
+
+                <h5>Redes Sociais</h5>
+
+                <div class="d-flex gap-3 mt-3">
+
+                    <a href="#" class="social-icon">
+
+                        <i class="bi bi-facebook"></i>
+
+                    </a>
+
+                    <a href="#" class="social-icon">
+
+                        <i class="bi bi-instagram"></i>
+
+                    </a>
+
+                    <a href="#" class="social-icon">
+
+                        <i class="bi bi-twitter-x"></i>
+
+                    </a>
+
+                    <a href="#" class="social-icon">
+
+                        <i class="bi bi-github"></i>
+
+                    </a>
+
+                    <a href="#" class="social-icon">
+
+                        <i class="bi bi-youtube"></i>
+
+                    </a>
+
+                </div>
+
+                <a href="#top"
+
+                    class="btn btn-outline-primary rounded-pill mt-4">
+
+                    <i class="bi bi-arrow-up-circle-fill"></i>
+
+                    Voltar ao topo
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary my-4">
+
+        <div class="d-flex justify-content-between flex-column flex-md-row">
+
+            <p class="text-secondary mb-2">
+
+                © 2026 Guerra dos Cérebros.
+
+                Todos os direitos reservados.
+
+            </p>
+
+            <p class="text-secondary">
+
+                Desenvolvido por Kayke Cansanção
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</div>
+
+<!-- =========================
+        MODAL LOGIN
+========================== -->
+
+<div class="modal fade"
+
+id="myModal"
+
+tabindex="-1">
+
+<div class="modal-dialog modal-dialog-centered">
+
+<div class="modal-content">
+
+<div class="modal-header bg-primary text-white">
+
+<h5 class="modal-title">
+
+<i class="bi bi-person-circle"></i>
+
+Entrar
+
+</h5>
+
+<button
+
+type="button"
+
+class="btn-close btn-close-white"
+
+data-bs-dismiss="modal">
+
+</button>
+
+</div>
+
+<div class="modal-body">
+
+<form>
+
+<div class="form-floating mb-3">
+
+<input
+
+type="email"
+
+class="form-control"
+
+id="loginEmail"
+
+placeholder="Email">
+
+<label for="loginEmail">
+
+Email
+
+</label>
+
+</div>
+
+<div class="form-floating mb-3">
+
+<input
+
+type="password"
+
+class="form-control"
+
+id="loginSenha"
+
+placeholder="Senha">
+
+<label for="loginSenha">
+
+Senha
+
+</label>
+
+</div>
+
+<div class="d-grid">
+
+<button
+
+class="btn btn-primary">
+
+<i class="bi bi-box-arrow-in-right"></i>
+
+Entrar
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+<div class="modal-footer">
+
+<button
+
+class="btn btn-secondary"
+
+data-bs-dismiss="modal">
+
+Fechar
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<style>
+
+/* ===========================
+        FOOTER
+=========================== */
+
+.footer-link{
+
+    display:block;
+
+    color:#adb5bd;
+
+    text-decoration:none;
+
+    margin-bottom:10px;
+
+    transition:.3s;
+
+}
+
+.footer-link:hover{
+
+    color:#0d6efd;
+
+    transform:translateX(6px);
+
+}
+
+.social-icon{
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#212529;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:1.2rem;
+
+    transition:.3s;
+
+    border:1px solid #495057;
+
+}
+
+.social-icon:hover{
+
+    background:#0d6efd;
+
+    color:white;
+
+    transform:translateY(-5px) scale(1.1);
+
+    box-shadow:0 0 20px rgba(13,110,253,.5);
+
+}
+
+footer{
+
+    margin-top:auto;
+
+    box-shadow:0 -8px 25px rgba(0,0,0,.35);
+
+}
+
+/* Botões */
+
+.btn{
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* Cards */
+
+.card{
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 1rem 2rem rgba(0,0,0,.25);
+
+}
+
+</style>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+/* Tooltips */
+
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+
+tooltipTriggerList.forEach(function(item){
+
+    new bootstrap.Tooltip(item);
+
+});
+
+/* Mostrar logo pequena ao rolar */
+
+const header = document.querySelector("header");
+
+const brand = document.querySelector(".navbar-brand");
+
+if(header && brand){
+
+const observer = new IntersectionObserver(
+
+(entries)=>{
+
+brand.classList.toggle(
+
+"opacity-100",
+
+!entries[0].isIntersecting
+
+);
+
+},
+
+{threshold:0}
+
+);
+
+observer.observe(header);
+
+}
+
+/* Scroll suave */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+anchor.addEventListener("click",function(e){
+
+const destino=document.querySelector(this.getAttribute("href"));
+
+if(destino){
+
+e.preventDefault();
+
+destino.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>
